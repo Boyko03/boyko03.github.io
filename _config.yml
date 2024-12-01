@@ -18,14 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My awesome site
-email: boyko.georgiev03@gmail.com
+title: Boyko Georgiev
+author:
+  name: Boyko Georgiev
+  email: boyko.georgiev03@gmail.com
+
 description: >- # this means to ignore newlines until "baseurl:"
-  This site will be used as my portfolio and blog.
+  My portfolio and personal blog.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  boyko03
 
 # Build settings
 # theme: minima
@@ -37,6 +39,9 @@ remote_theme: jekyll/minima
 
 minima:
   skin: auto
+  social_links:
+    - { platform: github,  user_url: "https://github.com/Boyko03" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/boyko-georgiev" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
