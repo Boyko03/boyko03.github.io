@@ -957,6 +957,21 @@ section,
   text-decoration: underline;
 }
 
+.portfolio-details .info-card .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-details .info-card .tech-stack span {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .portfolio-details .portfolio-description {
   padding-top: 30px;
 }
