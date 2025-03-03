@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Visual Scripting</h1>
+        <h1 class="mb-2 mb-lg-0">Visual Scripting Tool</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Visual Scripting</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Visual Scripting Tool</li>
           </ol>
         </nav>
       </div>
@@ -140,7 +140,7 @@
               <ul>
                 <li class="d-flex justify-content-between"><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> <span>Student Project</span></li>
                 <li class="d-flex justify-content-between"><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Custom Engine, C++</li>
-                <li class="d-flex justify-content-between"><strong><i class="bi bi-calendar-fill"></i> Date:</strong> January 2024</li>
+                <li class="d-flex justify-content-between"><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Dec 2023 - Jan 2024</li>
                 <li class="d-flex justify-content-between"><strong><i class="bi bi-people"></i> Team Size:</strong> Solo</li>
                 <li class="d-flex justify-content-between"><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
                 <li><strong>Project URL</strong> <a href="/blog/2024-01-26-generating-lua-scripts-from-a-node-graph-based-visual-script.html" target="_blank" rel="noopener">Link to Blog post</a></li>
@@ -169,7 +169,7 @@
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>January 2024</span>
+                      <span>Dec 2023 - Jan 2024</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -200,15 +200,48 @@
                   <div class="project-section">
                     <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      I wanted to make a tool that would allow designers to quickly and easily write custom behaviors and be able to iterate quickly. The tool also had to be able to easily integrate with the existing engine. Objects in the game had to be able to interact with each other, which meant that scripts had to support various events and had to be able to access variables and functions from other scripts.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      After researching the topic, I decided to use Lua because of its fast execution. When the user presses the "Compile" button, a Lua script is generated from the node graph. The script is then compiled which means that the graph is processed only once while in-editor and during runtime the program is using the precompiled scripts.
                     </p>
+                    <p>
+                      The engine was using an Entity Component System (ECS) which made using Unity's ECS approach easier to implement than Unreal's blueprints so I made it that scripts can be attached to objects as components. This allows for quick iterations as the users can edit the script and reload it at runtime.
+                    </p>
+                    <p>
+                      The user can define functions with arguments and return values of different types, implement events, declare variables of different types, and for optimization reasons declare local variables for each function and event in the script.
+                    </p>
+                    <p>
+                      I added nodes for interacting with the ECS for getting, adding, and removing components, as well as checking if an entity has a specific script. If it does, functions and variables from that script can be accessed.
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-award"></i> Example - Patrolling Entities</h3>
+                    <figure class="figure">
+                      <a href="/assets/img/portfolio/visual-scripting/patroling_entities.mp4" data-gallery="portfolio-gallery-app" class="glightbox">
+                        <video src="/assets/img/portfolio/visual-scripting/patroling_entities.mp4" autoplay loop muted class="img-fluid figure-img img-fluid rounded" alt=""></video>
+                      </a>
+                      <figcaption class="figure-caption">Example - Patrolling Entities - Behavior</figcaption>
+                    </figure>
+                    <div class="row">
+                      <figure class="figure col-6">
+                        <a href="/assets/img/portfolio/visual-scripting/visual_script_patrol.png" data-gallery="portfolio-gallery-app" class="glightbox">
+                          <img src="/assets/img/portfolio/visual-scripting/visual_script_patrol.png" class="img-fluid figure-img img-fluid rounded" alt=""/>
+                        </a>
+                        <figcaption class="figure-caption">Example - Patrolling Entities - Visual Script</figcaption>
+                      </figure>
+                      <figure class="figure col-6">
+                        <a href="/assets/img/portfolio/visual-scripting/generated_script.png" data-gallery="portfolio-gallery-app" class="glightbox">
+                          <img src="/assets/img/portfolio/visual-scripting/generated_script.png" class="img-fluid figure-img img-fluid rounded" alt=""/>
+                        </a>
+                        <figcaption class="figure-caption">Example - Patrolling Entities - Generated Lua Script</figcaption>
+                      </figure>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -251,6 +284,18 @@
                     </div>
                     <div class="col-6">
                       <img src="/assets/img/portfolio/visual-scripting/ScriptElements.png" alt="A Script consists of Events, Functions, and Variables. <br> Each event and function can have their own Local Variables." class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/visual-scripting/visual_script.png" alt="A Script consists of Events, Functions, and Variables. <br> Each event and function can have their own Local Variables." class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/visual-scripting/lua_script.png" alt="A Script consists of Events, Functions, and Variables. <br> Each event and function can have their own Local Variables." class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/visual-scripting/visual_script_patrol.png" alt="A Script consists of Events, Functions, and Variables. <br> Each event and function can have their own Local Variables." class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/visual-scripting/generated_script.png" alt="A Script consists of Events, Functions, and Variables. <br> Each event and function can have their own Local Variables." class="img-fluid glightbox" loading="lazy">
                     </div>
                   </div>
                 </div>
