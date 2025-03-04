@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>Dynamic Split Screen</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Dynamic Split Screen</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Dynamic Split Screen</li>
           </ol>
         </nav>
       </div>
@@ -113,11 +113,11 @@
 
               <div class="swiper-wrapper align-items-center">
 
-                <!-- <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/portfolio-1.webp" alt="">
+                <div class="swiper-slide">
+                  <video src="/assets/img/portfolio/dynamic-split-screen/DynamicSplitScreen.mp4" autoplay loop muted></video>
                 </div>
 
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <img src="/assets/img/portfolio/portfolio-10.webp" alt="">
                 </div>
 
@@ -138,12 +138,12 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
+                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Student Project</li>
                 <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
-                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> October 2024</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> Solo</li>
+                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 1 weeks</li>
+                <!-- <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li> -->
               </ul>
             </div>
           </div>
@@ -164,48 +164,65 @@
             <div class="col-lg-7" data-aos="fade-up">
               <div class="project-content">
                 <div class="project-header">
-                  <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <span class="category">Tool</span>
+                  <h2>Dynamic Split Screen</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>October 2024</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
                       <span>BUas</span>
                     </div>
-                    <div class="meta-item">
+                    <!-- <div class="meta-item">
                       <i class="bi bi-globe"></i>
                       <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    Dynamic Voronoi Split Screen made in Unreal Engine 5
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      This is one of the projects that taught me how important research is when you are not familiar with the topic. I did it as part of my self-study project where I wanted to learn how local and online multiplayer work in Unreal Engine 5.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      I decided to start with the local multiplayer because it's easier. While researching the different split screen options and how I can enable and disable it at runtime, one of my teachers suggested me to look at the split screen in the Lego game and to try and make it in Unreal.
                     </p>
+                    <p>I had no previous experience on this topic so I started researching...</p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      At first, I started looking at Unreal's source code to see how it is implemented there and I even added new settings to the "Project Settings" (for which I had to compile the engine from source). Unfortunately, the way it is done in Unreal allows only for rectangular windows and not Voronoi ones like in the Lego game.
                     </p>
+                    <p>
+                      After doing some more research, I found several plugins for dynamic split screen and different examples of how it can be implemented (there was even a Godot example that runs in the browser which helped me a lot in defining what I want the end result to look like).
+                    </p>
+                    <p>
+                      The simplest solution is the best solution. In the end I just replaced the <code>CameraComponent</code> of the player with a <code>ScreenCaptureComponent</code> which I offset based on the distance between the players and the direction to them. Then I used a <code>Post Processing Material</code> to blend the two textures and that's it!
+                    </p>
+                    <p>
+                      After that, I made it to be a plugin so that I can use it in my other projects if I need it. It works for top-down games or games where the camera rotation is fixed.
+                    </p>
+                    <p>
+                      It currently works only with two players, but I'm planning to continue developing it and adding support for N players.
+                    </p>
+                    <figure class="figure">  
+                      <img src="/assets/img/portfolio/dynamic-split-screen/customization.png" class="img-fluid" alt="">
+                      <figcaption class="figure-caption">Customization settings. User can change the max thickness of the line separating the screens and its color. User can also set whether the view should always be in split screen and whether it is top-down or not.</figcaption>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -216,12 +233,9 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Dynamic Voronoi Split Screen</li>
+                    <li><i class="bi bi-check-circle"></i> Simple and easy to use</li>
+                    <li><i class="bi bi-check-circle"></i> Customizable</li>
                   </ul>
                 </div>
 
@@ -236,10 +250,17 @@
                 <div class="gallery-grid">
                   <h3>Project Gallery</h3>
                   <div class="row g-3">
-                    <!-- <div class="col-6">
-                      <img src="/assets/img/portfolio/portfolio-3.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                    <div class="col-6">
+                      <a href="/assets/img/portfolio/dynamic-split-screen/DynamicSplitScreen.mp4" class="glightbox" data-glightbox="title: Dynamic Voronoi Split Screen; description: When the players are close to each other, the two views merge. Otherwise, split view is shown.">
+                        <video src="/assets/img/portfolio/dynamic-split-screen/DynamicSplitScreen.mp4" alt="Gallery Image" class="img-fluid" loading="lazy" autoplay loop muted></video>
+                      </a>
                     </div>
                     <div class="col-6">
+                      <a href="/assets/img/portfolio/dynamic-split-screen/customization.png" class="glightbox" data-glightbox="title: Customization settings; description: User can change the max thickness of the line separating the screens and its color. User can also set whether the view should always be in split screen and whether it is top-down or not.">
+                        <img src="/assets/img/portfolio/dynamic-split-screen/customization.png" class="img-fluid">
+                      </a>
+                    </div>
+                    <!-- <div class="col-6">
                       <img src="/assets/img/portfolio/portfolio-10.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
