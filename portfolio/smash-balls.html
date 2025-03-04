@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Smash Balls</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Smash Balls</li>
           </ol>
         </nav>
       </div>
@@ -140,10 +140,10 @@
               <ul>
                 <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
                 <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May - June 2023</li>
                 <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
                 <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong>Project URL</strong> <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
               </ul>
             </div>
           </div>
@@ -169,7 +169,7 @@
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>May - June 2023</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -184,27 +184,72 @@
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    Fast-paced 2-4 player couch versus platform fighter
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      This is my first team project at BUas. It was made in the last block of my first year. In this project I was a <code>Lead programmer</code>, but my biggest contributions were in the gameplay:
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Player States</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      I implemented the player's "walking", charging, and launched states.
+                    </p>
+
+                    <h4>- Walking State</h4>
+                    <p>
+                      One part of the player is anchored while the other one is spinning around it. When the player presses any of the face buttons, if the spinning part can anchor itself on a platform, the other one starts spinning around it.
+                    </p>
+                    <figure class="figure">
+                      <video
+                        src="/assets/img/portfolio/smash-balls/Walking.mp4" autoplay loop muted
+                        alt="Skeuomorphic Design Example" class="img-fluid" loading="lazy"></video>
+                      <figcaption class="figure-caption">Walking state</figcaption>
+                    </figure>
+
+                    <h4>- Charging State</h4>
+                    <p>
+                      The player starts to spin faster. The player can choose in which direction they will be launched which is indicated with an arrow.
+                    </p>
+                    <figure class="figure">
+                      <video
+                        src="/assets/img/portfolio/smash-balls/Charging.mp4" autoplay loop muted
+                        alt="Skeuomorphic Design Example" class="img-fluid" loading="lazy"></video>
+                      <figcaption class="figure-caption">Charging state</figcaption>
+                    </figure>
+
+                    <h4>- Launched State</h4>
+                    <p>
+                     The player transforms into a ball and starts falling. Example in the following section.
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-lightbulb"></i> Teleports and Flippers</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      Teleports consist of two parts whose positions can be adjusted in the level editor:
+                      <img src="/assets/img/portfolio/smash-balls/teleports.png"
+                        alt="Teleports" class="img-fluid" loading="lazy">
+                    </p>
+                    <p>
+                      The flippers are located at the bottom of the level and they launch the player in a certain direction if it hits them.
+                    </p>
+                    <figure class="figure">
+                      <video
+                        src="/assets/img/portfolio/smash-balls/TeleportsAndFlippers.mp4" autoplay loop muted
+                        alt="Skeuomorphic Design Example" class="img-fluid" loading="lazy"></video>
+                      <figcaption class="figure-caption">Teleports and Flippers</figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Triangle Bumpers</h3>
+                    <p>
+                      The player bounces of the bumpers. The triangle bumper works in a similar way as the circular one, but its shape is a triangle (see above video).
                     </p>
                   </div>
                 </div>
@@ -216,12 +261,11 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Gameplay Programmer / Lead Programmer</li>
+                    <li><i class="bi bi-check-circle"></i> Player States and State Transitions</li>
+                    <li><i class="bi bi-check-circle"></i> Teleports</li>
+                    <li><i class="bi bi-check-circle"></i> Flippers</li>
+                    <li><i class="bi bi-check-circle"></i> Triangle Bumpers</li>
                   </ul>
                 </div>
 
