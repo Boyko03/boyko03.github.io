@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>Plaguefall</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Plaguefall</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Plaguefall</li>
           </ol>
         </nav>
       </div>
@@ -113,11 +113,11 @@
 
               <div class="swiper-wrapper align-items-center">
 
-                <!-- <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/portfolio-1.webp" alt="">
+                <div class="swiper-slide">
+                  <img src="/assets/img/portfolio/plaguefall/plaguefall.png" alt="">
                 </div>
 
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <img src="/assets/img/portfolio/portfolio-10.webp" alt="">
                 </div>
 
@@ -138,12 +138,12 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
+                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Student Game</li>
                 <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
-                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Sept 2024 - July 2025</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 23 -&gt; 6 programmers, 7 designers, 10 visual artists</li>
+                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 32 weeks</li>
+                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">Not Released on Steam yet</a></li>
               </ul>
             </div>
           </div>
@@ -165,11 +165,11 @@
               <div class="project-content">
                 <div class="project-header">
                   <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <h2>Plaguefall</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>Sept 2024 - July 2025</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -177,34 +177,64 @@
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-globe"></i>
-                      <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
+                      <a href="#" target="_blank" rel="noopener">Not Released on Steam yet</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    Plaguefall is an online multiplayer coop first-person shooter made in Unreal Engine 5.
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      My biggest contributions in this year-long project so far include but are not limited to: setting up the CI/CD pipeline with Jenkins, hosting and joining sessions, making sure that everything relevant is properly replicated, creating the Gadget System, adding async loading screens, setting up various Steam features like Stats & Achievements and Steam Lobbies.
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Gameplay Abilities and Effects</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      I used Unreal's Gameplay Ability System (GAS) to create abilities for shooting, reloading, using a gadget, and to apply appropriate effects. The biggest challenge was to make them work correctly for all players (server and clients) and to make sure that the attributes and the player states are synced correctly.
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Multiplayer & Replication</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      Besides making sure GAS replication works correctly, I had to make sure that all relevant VFX, SFX, and animations are replicated too.
+                    </p>
+                    <p>
+                      Our game is a first-person shooter which means that we have a first-person mesh for the local player and a third-person mesh for the other players. I had to make sure only the correct one was shown with the correct weapon attached to it.
+                      <div class="row">
+                        <img src="/assets/img/portfolio/plaguefall/mesh-fail-1.png" alt="" class="img-fluid col-6">
+                        <img src="/assets/img/portfolio/plaguefall/mesh-fail-2.png" alt="" class="img-fluid col-6">
+                        <span class="col-12 figure-caption">Examples of mesh visibility not set up properly</span>
+                      </div>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Gadget System</h3>
+                    <p>
+                      A created a modular gadget system that allows for easy addition of new gadgets. They only have to derive from the base class I made. The system provides an interface to equip, remove, and use a gadget.
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/plaguefall/PolishedGrenade.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Grenade gadget made with my system</figcaption>
+                      </figure>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Async Loading Screen</h3>
+                    <p>
+                      I used the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> to set up the loading screens, however I had to make some adjustments so that it works with seamless travel too.
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/plaguefall/Loading screen.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Async Loading Screen that shows a "Very Useful Loading Screen Tip"</figcaption>
+                      </figure>
                     </p>
                   </div>
                 </div>
@@ -216,12 +246,12 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Online multiplayer, Networking, Replication</li>
+                    <li><i class="bi bi-check-circle"></i> Gadget System</li>
+                    <li><i class="bi bi-check-circle"></i> Gameplay Ability System (GAS)</li>
+                    <li><i class="bi bi-check-circle"></i> Steam Features, Steamworks</li>
+                    <li><i class="bi bi-check-circle"></i> CI / CD with Perforce and Jenkins</li>
+                    <li><i class="bi bi-check-circle"></i> Async Loading Screens</li>
                   </ul>
                 </div>
 
@@ -230,16 +260,19 @@
                   <div class="tech-stack">
                     <span>Unreal Engine 5</span>
                     <span>C++</span>
+                    <span>Steamworks API</span>
+                    <span>GAS</span>
+                    <span>Jenkins</span>
                   </div>
                 </div>
 
                 <div class="gallery-grid">
                   <h3>Project Gallery</h3>
                   <div class="row g-3">
-                    <!-- <div class="col-6">
-                      <img src="/assets/img/portfolio/portfolio-3.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
                     <div class="col-6">
+                      <img src="/assets/img/portfolio/plaguefall/plaguefall.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <!-- <div class="col-6">
                       <img src="/assets/img/portfolio/portfolio-10.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
