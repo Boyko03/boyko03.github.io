@@ -1841,6 +1841,20 @@ section,
   }
 }
 
+.right {
+  float: right;
+  max-width: 450px;
+  margin: 0 0 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .right {
+    float: none;
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+}
+
 .blog-details .article-wrapper .article-content .content-section .image-with-caption img {
   width: 100%;
 }

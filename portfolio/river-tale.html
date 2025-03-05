@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>River Tale</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">River Tale</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">River Tale</li>
           </ol>
         </nav>
       </div>
@@ -144,10 +144,10 @@
               <ul>
                 <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
                 <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May - June 2024</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 20 -&gt; 2 programmers, 5 designers, 13 visual artists</li>
                 <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong>Project URL</strong> <a href="https://buas.itch.io/river-tale" target="_blank" rel="noopener">https://buas.itch.io/river-tale</a></li>
               </ul>
             </div>
           </div>
@@ -169,11 +169,11 @@
               <div class="project-content">
                 <div class="project-header">
                   <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <h2>River Tale</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>May - June 2024</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -181,35 +181,86 @@
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-globe"></i>
-                      <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
+                      <a href="https://buas.itch.io/river-tale" target="_blank" rel="noopener">https://buas.itch.io/river-tale</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    Immersive multiplayer XR adventure
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      This is the team project from the last block of my second year at BUas. We were a big team - 20 people and I was a <code>Lead Programmer</code> so good communication was crucial.
+                    </p>
+                    <p>
+                      I worked on programming the custom physical controllers and the wireless communication between them, as well as programming some of the boss behaviors using <code>Behavior Trees</code> and the <code>Environment Query System (EQS)</code>.
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-lightbulb"></i> Custom Physical Controllers</h3>
+                    <img src="/assets/img/portfolio/river-tale/hello-world.png" class="img-fluid right" alt="">
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      We wanted to have custom physical controllers so I spent most of the time working on them. The designers had an early prototype version built with an <code>Arduino</code>, however the communication was with cables which caused lots of issues (cables get detached, wires are lying everywhere while we want people to be able to run around).
+                    </p>
+                    <p>
+                      To overcome this challenge, I researched different wireless solutions and chose to use the <code>ESP32</code> microcontroller because it was perfect for our needs.
+                    </p>
+
+                    <figure class="figure">
+                      <a href="/assets/img/portfolio/river-tale/code.png" class="glightbox" data-gallery="main">
+                        <img src="/assets/img/portfolio/river-tale/code.png" class="img-fluid" alt="">
+                      </a>
+                      <figcaption class="figure-caption">Code for wireless communication between the ESPs using the <code>ESP-NOW</code> protocol</figcaption>
+                    </figure>
+
+                    <div class="row">
+                      <figure class="figure col-6">
+                        <a href="/assets/img/portfolio/river-tale/raise-drop-anchor.mp4" class="glightbox" data-gallery="main">
+                          <video src="/assets/img/portfolio/river-tale/raise-drop-anchor.mp4" class="img-fluid" autoplay loop muted controls></video>
+                        </a>
+                        <figcaption class="figure-caption">Raising and dropping the anchor</figcaption>
+                      </figure>
+                      <figure class="figure col-6">
+                        <a href="/assets/img/portfolio/river-tale/rick-roll.mov" class="glightbox" data-gallery="main">
+                          <video src="/assets/img/portfolio/river-tale/rick-roll.mov" class="img-fluid" controls></video>
+                        </a>
+                        <figcaption class="figure-caption">Experimenting with the ESP32</figcaption>
+                      </figure>
+                    </div>
+
+                    <p>
+                      I also made an electric schema of the project so that everyone knows how everything should be connected:
+                      <figure class="figure">
+                        <a href="/assets/img/portfolio/river-tale/e-schema.png" class="glightbox" data-gallery="main">
+                          <img src="/assets/img/portfolio/river-tale/e-schema.png" class="img-fluid" alt="">
+                        </a>
+                        <figcaption class="figure-caption">Electric schema of the project. It's using 4 ESP32 microcontrollers: left cannon, right cannon, helm, anchor</figcaption>
+                      </figure>
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Boss enemy spawning and the EQS</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      I used Unreal's <code>Behavior Trees</code> and <code>Environment Query System</code> to spawn enemies between the player and the boss.
                     </p>
+                    <figure class="figure">
+                      <a href="/assets/img/portfolio/river-tale/EQS.png" class="glightbox" data-gallery="main">
+                        <img src="/assets/img/portfolio/river-tale/EQS.png" class="img-fluid" alt="">
+                      </a>
+                      <figcaption class="figure-caption">Environment Query System</figcaption>
+                    </figure>
+                    <figure class="figure">
+                      <a href="/assets/img/portfolio/river-tale/boss-enemy-spawning.mp4" class="glightbox" data-gallery="main">
+                        <video src="/assets/img/portfolio/river-tale/boss-enemy-spawning.mp4" class="img-fluid" controls autoplay loop muted></video>
+                      </a>
+                      <figcaption class="figure-caption">Spawning enemies using the EQS</figcaption>
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -220,12 +271,10 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Custom physical wireless controllers (ESP32)</li>
+                    <li><i class="bi bi-check-circle"></i> Behavior Trees</li>
+                    <li><i class="bi bi-check-circle"></i> Environment Query System (EQS)</li>
+                    <li><i class="bi bi-check-circle"></i> XR Screen</li>
                   </ul>
                 </div>
 
@@ -234,6 +283,8 @@
                   <div class="tech-stack">
                     <span>Unreal Engine 5</span>
                     <span>C++</span>
+                    <span>ESP32</span>
+                    <span>Arduino IDE</span>
                   </div>
                 </div>
 
@@ -241,7 +292,7 @@
                   <h3>Project Gallery</h3>
                   <div class="row g-3">
                     <div class="col-6">
-                      <img src="/assets/img/portfolio/river-tale/play.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      <img src="/assets/img/portfolio/river-tale/play.png" alt="Final result" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
                       <img src="/assets/img/portfolio/river-tale/static1.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
@@ -254,6 +305,18 @@
                     </div>
                     <div class="col-6">
                       <img src="/assets/img/portfolio/river-tale/static4.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/river-tale/EQS.png" alt="EQS" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/river-tale/hello-world.png" alt="Every project needs a Hello World!" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/river-tale/e-schema.png" alt="Electric schema of the project" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/river-tale/code.png" alt="Wireless communication using the <code>ESP-NOW</code> protocol" class="img-fluid glightbox" loading="lazy">
                     </div>
                   </div>
                 </div>
