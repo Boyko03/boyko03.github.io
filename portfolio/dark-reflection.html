@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>Dark Reflection</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Dark Reflection</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Dark Reflection</li>
           </ol>
         </nav>
       </div>
@@ -139,11 +139,11 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
-                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
+                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Custom Engine, C++</li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Feb - April 2023</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> Solo</li>
                 <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong>Project URL</strong> <a href="https://boyko03.itch.io/dark-reflection" target="_blank" rel="noopener">https://boyko03.itch.io/dark-reflection</a></li>
               </ul>
             </div>
           </div>
@@ -165,11 +165,11 @@
               <div class="project-content">
                 <div class="project-header">
                   <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <h2>Dark Reflection</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>Feb - April 2023</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -177,34 +177,107 @@
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-globe"></i>
-                      <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
+                      <a href="https://boyko03.itch.io/dark-reflection" target="_blank" rel="noopener">https://boyko03.itch.io/dark-reflection</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    A game where you have to find the exit of a maze while avoiding enemies. Made with custom 2D CPU raytracing.
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      I had 6 weeks to make a small 2D ray tracing renderer and 2 weeks to make a small game to demonstrate it. This project taught me a lot about SIMD, optimization structures, and vector math. I implemented point lights, spot lights, mirrors, and rasterization. 
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-stars"></i> The game</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      I had two weeks to make a small game that demonstrates my ray tracer. I came up with the idea for the game, the objectives, and the level design. I used <a href="https://www.darkechogame.com/">Dark Echo</a> for inspiration, but instead of sound, I used light. <br>
+                      The player has to escape a dark maze full of hostile creatures that are attracted to light. He can use his flashlight and throw flares to distract them. Throughout the maze there are treasures that give the player points and more flares.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/dark-reflection/Untitled Diagram (1).jpg" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Design of the level</figcaption>
+                      </figure>
+                    </p>
+                    <p>
+                      Gameplay example:
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/dark-reflection/gameplay.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">The player can throw flares that bounce off walls.</figcaption>
+                      </figure>
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Lights</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      I started by implementing point lights and spot lights. The spot lights can have soft edges.
+                    </p>
+                    <p>
+                      I'm calculating the squared distance from the light sources to see if the pixel is in range. In this way I'm avoiding square roots which improves performance. <br>
+                      I'm using dot product to calculate the cone of the spot light. For soft edges, I have 2 cones - inner (normal calculation) and outer (using linear interpolation to blend).
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/dark-reflection/point_and_spot_lights.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Point lights and spot lights before I implemented occlusion. The spot lights follow the mouse cursor.</figcaption>
+                      </figure>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Mirrors</h3>
+                    <p>
+                      Having a mirror essentially doubles the amount of lights in the level. If the light ray hits a mirror, I calculate the hit position on the mirror and the mirrored position of the light source around the mirror (small white circle in the video below) and calculate as if the light was coming from there.
+                    </p>
+                    <figure class="figure">
+                      <video src="/assets/img/portfolio/dark-reflection/mirror_3.mp4" class="img-fluid" autoplay loop muted></video>
+                      <figcaption class="figure-caption">White mirror reflecting light from a spot light. Disabled soft edges for better visualization</figcaption>
+                    </figure>
+                    <figure class="figure">
+                      <video src="/assets/img/portfolio/dark-reflection/mirror_4.mp4" class="img-fluid" autoplay loop muted></video>
+                      <figcaption class="figure-caption">Red mirror reflecting light from a spot light</figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Occluders</h3>
+                    <p>
+                      My ray tracer supports lines, circles, and more complex objects:
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/dark-reflection/polygon_3.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Occluders</figcaption>
+                      </figure>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Optimization</h3>
+                    <p>
+                      For optimization I used multithreading with <code><a href="https://www.openmp.org/spec-html/5.0/openmp.html" target="_blank" rel="noopener noreferrer">OpenMP</a></code>, SIMD, and I implemented 3 optimization grids. Also, I used the DDA algorithm to improve performance when searching for occluders.
+                    </p>
+                    <p>
+                      I implemented 3 optimization grids: lights grid, shadows grid, and occluders grid:
+                      <ul>
+                        <li>The lights grid culls lights that are too far.</li>
+                        <li>The shadows grid is used to speed up shadows. If all four corners of a cell are unlit, then we can assume that the pixels inside that cell will be unlit too.</li>
+                        <li>The occluders grid is used so that we check for intersections only against relevant occluders.</li>
+                      </ul>
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/dark-reflection/light-grid.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Lights and shadows grid debug visualization: Point lights (green), Spot lights (red), Mirrors (magenta)</figcaption>
+                      </figure>
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/dark-reflection/occluder_grid_resize.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">Occluders grid resizes to match the level</figcaption>
+                      </figure>
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/dark-reflection/DDA.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Debug DDA (Digital Differential Analyzer) algorithm: Draw circles on the intersections between the line and the cells</figcaption>
+                      </figure>
                     </p>
                   </div>
                 </div>
@@ -216,12 +289,11 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> 2D CPU Ray Tracer</li>
+                    <li><i class="bi bi-check-circle"></i> Rasterization</li>
+                    <li><i class="bi bi-check-circle"></i> Optimization structures</li>
+                    <li><i class="bi bi-check-circle"></i> Multithreading</li>
+                    <li><i class="bi bi-check-circle"></i> SIMD</li>
                   </ul>
                 </div>
 
@@ -230,6 +302,8 @@
                   <div class="tech-stack">
                     <span>Unreal Engine 5</span>
                     <span>C++</span>
+                    <span>OpenMP</span>
+                    <span>SIMD</span>
                   </div>
                 </div>
 
@@ -237,16 +311,22 @@
                   <h3>Project Gallery</h3>
                   <div class="row g-3">
                     <div class="col-6">
-                      <img src="/assets/img/portfolio/dark-reflection/home.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      <img src="/assets/img/portfolio/dark-reflection/home.png" alt="Start menu" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
-                      <img src="/assets/img/portfolio/dark-reflection/level.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      <img src="/assets/img/portfolio/dark-reflection/level.png" alt="" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
-                      <img src="/assets/img/portfolio/dark-reflection/win.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      <img src="/assets/img/portfolio/dark-reflection/win.png" alt="Win screen" class="img-fluid glightbox" loading="lazy">
                     </div>
                     <div class="col-6">
-                      <img src="/assets/img/portfolio/dark-reflection/lose.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      <img src="/assets/img/portfolio/dark-reflection/lose.png" alt="Lose screen" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/dark-reflection/Untitled Diagram (1).jpg" alt="Level design" class="img-fluid glightbox" loading="lazy">
+                    </div>
+                    <div class="col-6">
+                      <img src="/assets/img/portfolio/dark-reflection/DDA.png" alt="DDA algorithm" class="img-fluid glightbox" loading="lazy">
                     </div>
                   </div>
                 </div>
