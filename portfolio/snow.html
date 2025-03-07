@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>Snow</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Snow</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">Snow</li>
           </ol>
         </nav>
       </div>
@@ -139,11 +139,11 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
-                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
-                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Custom Engine, C++</li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Dec 2021 - Mar 2022</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> Solo</li>
+                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 3 months</li>
+                <li><strong>Project URL</strong> <a href="https://boyko03.itch.io/snow" target="_blank" rel="noopener">https://boyko03.itch.io/snow</a></li>
               </ul>
             </div>
           </div>
@@ -165,11 +165,11 @@
               <div class="project-content">
                 <div class="project-header">
                   <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <h2>Snow</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>Dec 2021 - Mar 2022</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
@@ -177,34 +177,88 @@
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-globe"></i>
-                      <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
+                      <a href="https://boyko03.itch.io/snow" target="_blank" rel="noopener">https://boyko03.itch.io/snow</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    2D ski game (Intake Project). The first game I ever made.
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      This game was both my BUas intake project and my high school graduation project. I made it using the template provided by BUas and free assets that I got from itch.
+                    </p>
+                    <p>
+                      The game has two game modes - slalom and off-road. In slalom the player has to complete the track as fast as possible while moving on the correct side of the flags. In off-road the player has to survive for as long as possible to get a higher score. The levels are procedurally generated.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/snow/screenshot002.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Game mode selection</figcaption>
+                      </figure>
+                    </p>
+                    <p>
+                      In the end, the player can see a leaderboard with the top 10 scores for that mode and difficulty combination.
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-lightbulb"></i> Procedural level generation</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      The map is grid-based. At first, I had a vector with all the tiles and I was adding and removing tiles from it as the player progressed, but that means I was making many memory allocations which was not very performant. <br>
+                      Instead, I now keep track of which one is the "top row" in the vector and whenever I have to generate a new row for the map, I override the old top row and make the next row to be the new top row.
+                    </p>
+                    <p>
+                      Since all tiles are using the same tilemap, I'm storing it as a static variable which saved me lots of memory.
+                    </p>
+                    <p>
+                      For the slalom mode, flags are placed every X rows depending on the selected difficulty. For the off-road mode, the higher the difficulty is, the more obstacles there will be.
+                    </p>
+                    <p>
+                      Each tile stores the terrain that it has and the object that is on it as an enum value. The object is chosen randomly with chances varying based on the selected difficulty. Based on the game mode there is also a chance for a random power-up (health or shield) to spawn. <br>
+                      If the chosen object is a tree, I have to check if the object above it is also a tree so that I can render it properly (different tiles for whether there are one or two trees).
+                    </p>
+                    <p>
+                      The trees on both sides of the map are procedurally generated too.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/snow/screenshot004.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Procedurally generated map for the off-road level</figcaption>
+                      </figure>
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-check2-circle"></i> 2.5D</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      I first draw the background and the foreground and then I draw the player. Then, based on the player's position in the tile, I redraw the objects around him. This allows the player to go in front of and behind objects.
+                      <figure class="figure">
+                        <video src="/assets/img/portfolio/snow/25D.mp4" class="img-fluid" autoplay loop muted></video>
+                        <figcaption class="figure-caption">2.5D - rendering the player in front of / behind objects based on its position</figcaption>
+                      </figure>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Leaderboard</h3>
+                    <p>
+                      I have a text file for each mode-difficulty combination in which I store the top 10 scores. This allows me to easily retrieve the results and override them if needed. I chose to store them as plain text and not as a binary file, because I decided that readability is more important and it wouldn't have made a big difference.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/snow/screenshot005.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Leaderboard - if the result is in top 10, it is highlighted in green</figcaption>
+                      </figure>
+                    </p>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-check2-circle"></i> Collisions</h3>
+                    <p>
+                      I'm using AABB collision detection
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/snow/collision-box.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Debug draw collisions</figcaption>
+                      </figure>
                     </p>
                   </div>
                 </div>
@@ -216,12 +270,11 @@
                 <div class="info-card">
                   <h3>Project Features</h3>
                   <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Procedural level generation</li>
+                    <li><i class="bi bi-check-circle"></i> 2.5D rendering</li>
+                    <li><i class="bi bi-check-circle"></i> AABB collisions detection</li>
+                    <li><i class="bi bi-check-circle"></i> Powerups</li>
+                    <li><i class="bi bi-check-circle"></i> 2 game modes with 3 difficulties each</li>
                   </ul>
                 </div>
 
