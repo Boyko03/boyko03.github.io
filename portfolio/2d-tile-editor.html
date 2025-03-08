@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details</title>
+  <title>2D Tile Editor</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,7 +38,7 @@
       <img src="/assets/img/profile/profile.JPG" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="/index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.webp" alt=""> -->
       <h1 class="sitename">Boyko Georgiev</h1>
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">2D Tile Editor</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="/index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="/index.html#portfolio">Projects</a></li>
+            <li class="current">2D Tile Editor</li>
           </ol>
         </nav>
       </div>
@@ -134,12 +134,11 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Released Student Game</li>
-                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 31, 2023</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 14 -&gt; 3 programmers, 5 designers, 6 visual artists</li>
-                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 8 weeks</li>
-                <li><strong>Project URL</strong> <a href="#" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a></li>
+                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Tool made for a custom engine</li>
+                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Custom Engine, C++</li>
+                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> May 2024</li>
+                <li><strong><i class="bi bi-people"></i> Team Size:</strong> Solo</li>
+                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 2 weeks</li>
               </ul>
             </div>
           </div>
@@ -160,47 +159,75 @@
             <div class="col-lg-7" data-aos="fade-up">
               <div class="project-content">
                 <div class="project-header">
-                  <span class="category">Game</span>
-                  <h2>Smash Balls</h2>
+                  <span class="category">Tool</span>
+                  <h2>2D Tile Editor</h2>
                   <div class="meta">
                     <div class="meta-item">
                       <i class="bi bi-calendar3"></i>
-                      <span>May - June 2025</span>
+                      <span>May 2024</span>
                     </div>
                     <div class="meta-item">
                       <i class="bi bi-building"></i>
                       <span>BUas</span>
-                    </div>
-                    <div class="meta-item">
-                      <i class="bi bi-globe"></i>
-                      <a href="https://vittoriobellinello.itch.io/team-moth" target="_blank" rel="noopener">https://vittoriobellinello.itch.io/team-moth</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="content">
                   <p class="lead">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin sodales ultrices nulla blandit volutpat.
+                    2D tile editor made with ImGui for the WASP custom engine (student team project). Supports creating custom collisions
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+                      I was in a team of 7 programmers and we had to create a custom engine. One of the tools that we needed for it was a 2D tile editor, so I made one using ImGui.
+                    </p>
+                    <p>
+                      The requirements were that the user should be able to create, save, and load a tilemap, create custom collisions, generate a mesh with collisions that can be placed in the level.
+                    </p>
+                    <p>
+                      The user can also scroll, zoom in, zoom out, and resize the map.
+                    </p>
+                    <figure class="figure">
+                      <video src="/assets/img/portfolio/2d-tile-editor/tile_editor.mp4" class="img-fluid" autoplay loop muted></video>
+                      <figcaption class="figure-caption">Tile editor in action - create a tilemap with custom collisions and place it in the level</figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="project-section">
+                    <h3><i class="bi bi-lightbulb"></i> Tile Editor</h3>
+                    <p>
+                      When creating a new tilemap, the user first has to choose a tileset file, specify the size of the tileset (rows and columns), and set the size of the level (rows and columns).
+                    </p>
+                    <p>
+                      Then the user can select tiles from the map and "paint" the level. The user can also erase tiles.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/2d-tile-editor/tile-editor.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Tilemap editor</figcaption>
+                      </figure>
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Collision Editor</h3>
                     <p>
-                      Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
+                      Collisions are polygons. The user puts points and the shape is done when the user closes the polygon (connects to the start point). From the editor, the user can select a polygon and modify it by adding, moving, or removing points.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/2d-tile-editor/collision-editor.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">Collision editor</figcaption>
+                      </figure>
                     </p>
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Generating a mesh</h3>
                     <p>
-                      Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam.
+                      After saving the file, the user can drag it into the level, which creates a mesh with collisions. Since we are using an Entity Component System (ECS), I create a parent entity that has a mesh generated with vertices and indices from the tiles, and then for each collision polygon I create a child entity that has a polygon collision component with the corresponding shape.
+                      <figure class="figure">
+                        <img src="/assets/img/portfolio/2d-tile-editor/level-editor.png" class="img-fluid" alt="">
+                        <figcaption class="figure-caption">The generated mesh placed in the level</figcaption>
+                      </figure>
                     </p>
                   </div>
                 </div>
@@ -213,19 +240,19 @@
                   <h3>Project Features</h3>
                   <ul class="features-list">
                     <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> User Authentication</li>
-                    <li><i class="bi bi-check-circle"></i> Payment Integration</li>
-                    <li><i class="bi bi-check-circle"></i> Inventory Management</li>
-                    <li><i class="bi bi-check-circle"></i> Analytics Dashboard</li>
-                    <li><i class="bi bi-check-circle"></i> API Integration</li>
+                    <li><i class="bi bi-check-circle"></i> Create a tilemap</li>
+                    <li><i class="bi bi-check-circle"></i> Create custom collisions</li>
+                    <li><i class="bi bi-check-circle"></i> Save and Load</li>
+                    <li><i class="bi bi-check-circle"></i> Generate mesh with collisions</li>
                   </ul>
                 </div>
 
                 <div class="info-card">
                   <h3>Technologies Used</h3>
                   <div class="tech-stack">
-                    <span>Unreal Engine 5</span>
+                    <span>WASP Custom Engine</span>
                     <span>C++</span>
+                    <span>ImGui</span>
                   </div>
                 </div>
 
