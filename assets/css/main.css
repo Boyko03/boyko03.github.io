@@ -2116,3 +2116,17 @@ section,
   color: var(--contrast-color);
   transform: translateY(-2px);
 }
+
+.sps2 {
+  border: 1px solid var(--accent-color);
+  padding: 1px;
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-box-shadow: 0 8px 6px -6px #333;
+  -moz-box-shadow: 0 8px 6px -6px #333;
+  -webkit-box-shadow: 0 8px 6px -6px #333;
+  box-shadow: 0 8px 6px -6px #333;
+  margin-bottom: 5px;
+}

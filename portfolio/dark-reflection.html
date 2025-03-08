@@ -200,15 +200,15 @@
                       I had two weeks to make a small game that demonstrates my ray tracer. I came up with the idea for the game, the objectives, and the level design. I used <a href="https://www.darkechogame.com/">Dark Echo</a> for inspiration, but instead of sound, I used light. <br>
                       The player has to escape a dark maze full of hostile creatures that are attracted to light. He can use his flashlight and throw flares to distract them. Throughout the maze there are treasures that give the player points and more flares.
                       <figure class="figure">
-                        <img src="/assets/img/portfolio/dark-reflection/Untitled Diagram (1).jpg" class="img-fluid" alt="">
-                        <figcaption class="figure-caption">Design of the level</figcaption>
+                        <img src="/assets/img/portfolio/dark-reflection/Untitled Diagram (1).jpg" class="img-fluid sps2" alt="">
+                        <figcaption class="figure-caption text-center">Design of the level</figcaption>
                       </figure>
                     </p>
                     <p>
                       Gameplay example:
                       <figure class="figure">
-                        <video src="/assets/img/portfolio/dark-reflection/gameplay.mp4" class="img-fluid" autoplay loop muted></video>
-                        <figcaption class="figure-caption">The player can throw flares that bounce off walls.</figcaption>
+                        <video src="/assets/img/portfolio/dark-reflection/gameplay.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        <figcaption class="figure-caption text-center">The player can throw flares that bounce off walls.</figcaption>
                       </figure>
                     </p>
                   </div>
@@ -222,8 +222,8 @@
                       I'm calculating the squared distance from the light sources to see if the pixel is in range. In this way I'm avoiding square roots which improves performance. <br>
                       I'm using dot product to calculate the cone of the spot light. For soft edges, I have 2 cones - inner (normal calculation) and outer (using linear interpolation to blend).
                       <figure class="figure">
-                        <video src="/assets/img/portfolio/dark-reflection/point_and_spot_lights.mp4" class="img-fluid" autoplay loop muted></video>
-                        <figcaption class="figure-caption">Point lights and spot lights before I implemented occlusion. The spot lights follow the mouse cursor.</figcaption>
+                        <video src="/assets/img/portfolio/dark-reflection/point_and_spot_lights.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        <figcaption class="figure-caption text-center">Point lights and spot lights before I implemented occlusion. The spot lights follow the mouse cursor.</figcaption>
                       </figure>
                     </p>
                   </div>
@@ -234,12 +234,12 @@
                       Having a mirror essentially doubles the amount of lights in the level. If the light ray hits a mirror, I calculate the hit position on the mirror and the mirrored position of the light source around the mirror (small white circle in the video below) and calculate as if the light was coming from there.
                     </p>
                     <figure class="figure">
-                      <video src="/assets/img/portfolio/dark-reflection/mirror_3.mp4" class="img-fluid" autoplay loop muted></video>
-                      <figcaption class="figure-caption">White mirror reflecting light from a spot light. Disabled soft edges for better visualization</figcaption>
+                      <video src="/assets/img/portfolio/dark-reflection/mirror_3.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                      <figcaption class="figure-caption text-center">White mirror reflecting light from a spot light. Disabled soft edges for better visualization</figcaption>
                     </figure>
                     <figure class="figure">
-                      <video src="/assets/img/portfolio/dark-reflection/mirror_4.mp4" class="img-fluid" autoplay loop muted></video>
-                      <figcaption class="figure-caption">Red mirror reflecting light from a spot light</figcaption>
+                      <video src="/assets/img/portfolio/dark-reflection/mirror_4.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                      <figcaption class="figure-caption text-center">Red mirror reflecting light from a spot light</figcaption>
                     </figure>
                   </div>
 
@@ -248,8 +248,8 @@
                     <p>
                       My ray tracer supports lines, circles, and more complex objects:
                       <figure class="figure">
-                        <video src="/assets/img/portfolio/dark-reflection/polygon_3.mp4" class="img-fluid" autoplay loop muted></video>
-                        <figcaption class="figure-caption">Occluders</figcaption>
+                        <video src="/assets/img/portfolio/dark-reflection/polygon_3.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        <figcaption class="figure-caption text-center">Occluders</figcaption>
                       </figure>
                     </p>
                   </div>
@@ -267,16 +267,16 @@
                         <li>The occluders grid is used so that we check for intersections only against relevant occluders.</li>
                       </ul>
                       <figure class="figure">
-                        <video src="/assets/img/portfolio/dark-reflection/light-grid.mp4" class="img-fluid" autoplay loop muted></video>
-                        <figcaption class="figure-caption">Lights and shadows grid debug visualization: Point lights (green), Spot lights (red), Mirrors (magenta)</figcaption>
+                        <video src="/assets/img/portfolio/dark-reflection/light-grid.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        <figcaption class="figure-caption text-center">Lights and shadows grid debug visualization: Point lights (green), Spot lights (red), Mirrors (magenta)</figcaption>
                       </figure>
                       <figure class="figure">
-                        <video src="/assets/img/portfolio/dark-reflection/occluder_grid_resize.mp4" class="img-fluid" autoplay loop muted></video>
-                        <figcaption class="figure-caption">Occluders grid resizes to match the level</figcaption>
+                        <video src="/assets/img/portfolio/dark-reflection/occluder_grid_resize.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        <figcaption class="figure-caption text-center">Occluders grid resizes to match the level</figcaption>
                       </figure>
                       <figure class="figure">
-                        <img src="/assets/img/portfolio/dark-reflection/DDA.png" class="img-fluid" alt="">
-                        <figcaption class="figure-caption">Debug DDA (Digital Differential Analyzer) algorithm: Draw circles on the intersections between the line and the cells</figcaption>
+                        <img src="/assets/img/portfolio/dark-reflection/DDA.png" class="img-fluid sps2" alt="">
+                        <figcaption class="figure-caption text-center">Debug DDA (Digital Differential Analyzer) algorithm: Draw circles on the intersections between the line and the cells</figcaption>
                       </figure>
                     </p>
                   </div>
