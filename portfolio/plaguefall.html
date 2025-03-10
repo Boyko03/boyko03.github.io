@@ -184,30 +184,30 @@
 
                 <div class="content">
                   <p class="lead">
-                    Plaguefall is an online multiplayer coop first-person shooter made in Unreal Engine 5.
+                    Plaguefall is a cooperative online multiplayer first-person shooter developed in Unreal Engine 5.
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      My biggest contributions in this year-long project so far include but are not limited to: setting up the CI/CD pipeline with Jenkins, hosting and joining sessions, making sure that everything relevant is properly replicated, creating the Gadget System, adding async loading screens, setting up various Steam features like Stats & Achievements and Steam Lobbies.
+                      My key contributions to this year-long project include, but are not limited to, setting up the CI/CD pipeline with Jenkins, managing session hosting and joining, ensuring proper replication of relevant data, developing the Gadget System, implementing asynchronous loading screens, and integrating various Steam features such as Stats & Achievements and Steam Lobbies.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> Gameplay Abilities and Effects</h3>
                     <p>
-                      I used Unreal's Gameplay Ability System (GAS) to create abilities for shooting, reloading, using a gadget, and to apply appropriate effects. The biggest challenge was to make them work correctly for all players (server and clients) and to make sure that the attributes and the player states are synced correctly.
+                      I utilized Unreal's Gameplay Ability System (GAS) to develop abilities for shooting, reloading, gadget usage, and applying relevant effects. The most significant challenge was ensuring these abilities functioned correctly for all players, both on the server and clients, while maintaining proper synchronization of attributes and player states.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> Multiplayer & Replication</h3>
                     <p>
-                      Besides making sure GAS replication works correctly, I had to make sure that all relevant VFX, SFX, and animations are replicated too.
+                      In addition to ensuring proper replication of the Gameplay Ability System (GAS), I was also responsible for making sure that all relevant visual effects (VFX), sound effects (SFX), and animations were correctly synchronized across all players.
                     </p>
                     <p>
-                      Our game is a first-person shooter which means that we have a first-person mesh for the local player and a third-person mesh for the other players. I had to make sure only the correct one was shown with the correct weapon attached to it.
+                      Our game is a first-person shooter, which requires a first-person mesh for the local player and a third-person mesh for other players. I was responsible for ensuring that the correct mesh was displayed for each player, with the appropriate weapon properly attached.
                       <div class="row">
                         <img src="/assets/img/portfolio/plaguefall/mesh-fail-1.png" alt="" class="img-fluid col-6 sps2">
                         <img src="/assets/img/portfolio/plaguefall/mesh-fail-2.png" alt="" class="img-fluid col-6 sps2">
@@ -219,7 +219,7 @@
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> Gadget System</h3>
                     <p>
-                      A created a modular gadget system that allows for easy addition of new gadgets. They only have to derive from the base class I made. The system provides an interface to equip, remove, and use a gadget.
+                      I designed a modular gadget system that enables seamless integration of new gadgets by simply deriving from a base class. The system provides a clear interface for equipping, removing, and using gadgets, ensuring flexibility and ease of expansion.
                       <figure class="figure">
                         <video src="/assets/img/portfolio/plaguefall/PolishedGrenade.mp4" class="img-fluid sps2" autoplay loop muted></video>
                         <figcaption class="figure-caption text-center">Grenade gadget made with my system</figcaption>
@@ -230,7 +230,7 @@
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> Async Loading Screen</h3>
                     <p>
-                      I used the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> to set up the loading screens, however I had to make some adjustments so that it works with seamless travel too.
+                      I implemented the loading screens using the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> but had to make several adjustments to ensure compatibility with seamless travel.
                       <figure class="figure">
                         <video src="/assets/img/portfolio/plaguefall/Loading screen.mp4" class="img-fluid sps2" autoplay loop muted></video>
                         <figcaption class="figure-caption text-center">Async Loading Screen that shows a "Very Useful Loading Screen Tip"</figcaption>

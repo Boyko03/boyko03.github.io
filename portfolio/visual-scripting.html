@@ -193,24 +193,24 @@
                       Visual scripting or visual programming is a form of programming that lets the user create programs by using graphical elements instead of writing traditional code. This makes it easier to use by non-programmers, as they don’t have to learn a specific language, and allows for faster prototyping by designers.
                     </p>
                     <p>
-                      I made a tool for creating a visual script based on a node graph, and then generating a Lua script from it.
+                      I developed a tool that allows users to create visual scripts through a node-based graph, which is then automatically converted into Lua scripts.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
                     <p>
-                      I wanted to make a tool that would allow designers to quickly and easily write custom behaviors and be able to iterate quickly. The tool also had to be able to easily integrate with the existing engine. Objects in the game had to be able to interact with each other, which meant that scripts had to support various events and had to be able to access variables and functions from other scripts.
+                      My goal was to create a tool that would enable designers to quickly and easily write custom behaviors, allowing for fast iteration. The tool needed to integrate seamlessly with the existing engine. To facilitate interaction between game objects, the scripts had to support various events and provide access to variables and functions from other scripts, ensuring effective communication across the system.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
                     <p>
-                      After researching the topic, I decided to use Lua because of its fast execution. When the user presses the "Compile" button, a Lua script is generated from the node graph. The script is then compiled which means that the graph is processed only once while in-editor and during runtime the program is using the precompiled scripts.
+                      After researching the topic, I chose Lua for its fast execution speed. When the user presses the "Compile" button, the node graph is converted into a Lua script, which is then compiled. This approach ensures that the graph is processed only once while in-editor, with the precompiled scripts being used during runtime.
                     </p>
                     <p>
-                      The engine was using an Entity Component System (ECS) which made using Unity's ECS approach easier to implement than Unreal's blueprints so I made it that scripts can be attached to objects as components. This allows for quick iterations as the users can edit the script and reload it at runtime.
+                      The engine was using an Entity Component System (ECS) which made implementing Unity's ECS approach more straightforward than Unreal's Blueprints. As a result, I designed the system so that scripts could be attached to objects as components, enabling rapid iteration. Users can edit and reload scripts at runtime, streamlining the development process.
                     </p>
                     <p>
                       The user can define functions with arguments and return values of different types, implement events, declare variables of different types, and for optimization reasons declare local variables for each function and event in the script.

@@ -196,12 +196,11 @@
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-lightbulb"></i> Tile Editor</h3>
+                    <h3><i class="bi bi-lightbulb"></i> Tile Editor Functionality</h3>
                     <p>
-                      When creating a new tilemap, the user first has to choose a tileset file, specify the size of the tileset (rows and columns), and set the size of the level (rows and columns).
+                      Users begin by selecting a tileset file and specifying its dimensions (rows and columns), along with the desired level size. The editor allows for intuitive "painting" of the level by selecting and placing tiles, as well as erasing them when necessary. Additional features include scrolling, zooming in and out, and resizing the map to accommodate various design requirements.
                     </p>
                     <p>
-                      Then the user can select tiles from the map and "paint" the level. The user can also erase tiles.
                       <figure class="figure">
                         <img src="/assets/img/portfolio/2d-tile-editor/tile-editor.png" class="img-fluid sps2" alt="">
                         <figcaption class="figure-caption text-center">Tilemap editor</figcaption>
@@ -210,9 +209,9 @@
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Collision Editor</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Collision Editor Features</h3>
                     <p>
-                      Collisions are polygons. The user puts points and the shape is done when the user closes the polygon (connects to the start point). From the editor, the user can select a polygon and modify it by adding, moving, or removing points.
+                      The Collision Editor facilitates the creation of polygon-based collision shapes. Users can define these shapes by placing points to form polygons, completing the shape upon connecting to the starting point. The editor also offers functionality to select existing polygons and modify them by adding, moving, or removing points, providing flexibility in collision design.
                       <figure class="figure">
                         <img src="/assets/img/portfolio/2d-tile-editor/collision-editor.png" class="img-fluid sps2" alt="">
                         <figcaption class="figure-caption text-center">Collision editor</figcaption>
@@ -221,9 +220,9 @@
                   </div>
 
                   <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Generating a mesh</h3>
+                    <h3><i class="bi bi-check2-circle"></i> Mesh Generation and Integration</h3>
                     <p>
-                      After saving the file, the user can drag it into the level, which creates a mesh with collisions. Since we are using an Entity Component System (ECS), I create a parent entity that has a mesh generated with vertices and indices from the tiles, and then for each collision polygon I create a child entity that has a polygon collision component with the corresponding shape.
+                      Once a tilemap is saved, it can be imported into the level editor, where a mesh with corresponding collisions is generated. Utilizing an Entity Component System (ECS) architecture, the tool creates a parent entity containing a mesh constructed from the tiles' vertices and indices. For each collision polygon, a child entity is generated with a polygon collision component, ensuring accurate collision representation within the game environment.
                       <figure class="figure">
                         <img src="/assets/img/portfolio/2d-tile-editor/level-editor.png" class="img-fluid sps2" alt="">
                         <figcaption class="figure-caption text-center">The generated mesh placed in the level</figcaption>
@@ -240,10 +239,10 @@
                   <h3>Project Features</h3>
                   <ul class="features-list">
                     <li><i class="bi bi-check-circle"></i> Responsive Design</li>
-                    <li><i class="bi bi-check-circle"></i> Create a tilemap</li>
-                    <li><i class="bi bi-check-circle"></i> Create custom collisions</li>
-                    <li><i class="bi bi-check-circle"></i> Save and Load</li>
-                    <li><i class="bi bi-check-circle"></i> Generate mesh with collisions</li>
+                    <li><i class="bi bi-check-circle"></i> Tilemap Creation</li>
+                    <li><i class="bi bi-check-circle"></i> Custom Collision Design</li>
+                    <li><i class="bi bi-check-circle"></i> Save and Load Functionality</li>
+                    <li><i class="bi bi-check-circle"></i> Mesh Generation with Collisions</li>
                   </ul>
                 </div>
 

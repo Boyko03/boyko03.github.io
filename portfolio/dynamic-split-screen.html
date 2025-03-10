@@ -184,40 +184,33 @@
 
                 <div class="content">
                   <p class="lead">
-                    Dynamic Voronoi Split Screen made in Unreal Engine 5
+                    Dynamic split screen, also known as Voronoi split screen, is a technique used in local multiplayer games to provide each player with an optimal view by dynamically adjusting the screen based on player positions. This approach enhances the gaming experience by offering a more intuitive and flexible display compared to traditional fixed split screens.
                   </p>
 
                   <div class="project-section">
                     <h3><i class="bi bi-stars"></i> Project Overview</h3>
                     <p>
-                      This is one of the projects that taught me how important research is when you are not familiar with the topic. I did it as part of my self-study project where I wanted to learn how local and online multiplayer work in Unreal Engine 5.
+                      In October 2024, as part of a self-study project at Breda University of Applied Sciences (BUas), I developed a dynamic Voronoi split screen system using Unreal Engine 5. The objective was to deepen my understanding of local and online multiplayer functionalities within Unreal Engine.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-lightbulb"></i> The Challenge</h3>
                     <p>
-                      I decided to start with the local multiplayer because it's easier. While researching the different split screen options and how I can enable and disable it at runtime, one of my teachers suggested me to look at the split screen in the Lego game and to try and make it in Unreal.
+                      Starting with local multiplayer due to its relative simplicity, I explored various split screen configurations and methods to toggle them at runtime. A teacher recommended examining the dynamic split screen implementation in the LEGO game and attempting a similar approach in Unreal Engine. Lacking prior experience in this area, I embarked on comprehensive research to grasp the underlying concepts.
                     </p>
-                    <p>I had no previous experience on this topic so I started researching...</p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> The Solution</h3>
                     <p>
-                      At first, I started looking at Unreal's source code to see how it is implemented there and I even added new settings to the "Project Settings" (for which I had to compile the engine from source). Unfortunately, the way it is done in Unreal allows only for rectangular windows and not Voronoi ones like in the Lego game.
+                      Initially, I delved into Unreal Engine's source code to understand its native split screen implementation, even modifying the engine to add new settings - a process that involved compiling the engine from source. However, Unreal's default setup supports only rectangular window splits, unlike the Voronoi-style splits seen in LEGO games.
                     </p>
                     <p>
-                      After doing some more research, I found several plugins for dynamic split screen and different examples of how it can be implemented (there was even a Godot example that runs in the browser which helped me a lot in defining what I want the end result to look like).
+                      Further research led me to various plugins and examples demonstrating dynamic split screen implementations, including a good Godot engine example that provided a clear visual reference. Ultimately, I adopted a straightforward solution: replacing the player's <code>CameraComponent</code> with a <code>SceneCaptureComponent</code>, which adjusts its offset based on the distance and direction between players. I then utilized a post-processing material to blend the two textures seamlessly.
                     </p>
                     <p>
-                      The simplest solution is the best solution. In the end I just replaced the <code>CameraComponent</code> of the player with a <code>ScreenCaptureComponent</code> which I offset based on the distance between the players and the direction to them. Then I used a <code>Post Processing Material</code> to blend the two textures and that's it!
-                    </p>
-                    <p>
-                      After that, I made it to be a plugin so that I can use it in my other projects if I need it. It works for top-down games or games where the camera rotation is fixed.
-                    </p>
-                    <p>
-                      It currently works only with two players, but I'm planning to continue developing it and adding support for N players.
+                      To make it reusable, I packaged this functionality into a plugin, making it easily integrable into other projects. The current implementation is tailored for top-down games or those with fixed camera rotations and supports two players. Future plans include extending support to multiple players.
                     </p>
                     <figure class="figure">  
                       <img src="/assets/img/portfolio/dynamic-split-screen/customization.png" class="img-fluid sps2" alt="">

@@ -193,28 +193,30 @@
                       This game was both my BUas intake project and my high school graduation project. I made it using the template provided by BUas and free assets that I got from itch.
                     </p>
                     <p>
-                      The game has two game modes - slalom and off-road. In slalom the player has to complete the track as fast as possible while moving on the correct side of the flags. In off-road the player has to survive for as long as possible to get a higher score. The levels are procedurally generated.
+                      <strong>Game Modes</strong>
+                      <ul>
+                        <li><strong>Slalom Mode:</strong> Players navigate a course, aiming to complete it as quickly as possible while passing on the correct side of flags.</li>
+                        <li><strong>Off-Road Mode:</strong> Players strive to survive for as long as possible to achieve higher scores.</li>
+                      </ul>
+                      Both modes feature procedurally generated levels, enhancing replayability. At the end of each mode, a leaderboard displays the top 10 scores for the selected difficulty.
                       <figure class="figure">
                         <img src="/assets/img/portfolio/snow/screenshot002.png" class="img-fluid sps2" alt="">
                         <figcaption class="figure-caption text-center">Game mode selection</figcaption>
                       </figure>
-                    </p>
-                    <p>
-                      In the end, the player can see a leaderboard with the top 10 scores for that mode and difficulty combination.
                     </p>
                   </div>
 
                   <div class="project-section">
                     <h3><i class="bi bi-lightbulb"></i> Procedural level generation</h3>
                     <p>
-                      The map is grid-based. At first, I had a vector with all the tiles and I was adding and removing tiles from it as the player progressed, but that means I was making many memory allocations which was not very performant. <br>
-                      Instead, I now keep track of which one is the "top row" in the vector and whenever I have to generate a new row for the map, I override the old top row and make the next row to be the new top row.
+                      The map is grid-based. At first, I had a vector with all the tiles and I was adding and removing tiles from it as the player progressed which led to frequent memory allocations, impacting the performance. <br>
+                      To optimize, I implemented a system that tracks the "top row" and overrides it with new rows as the player progresses. This method reduced memory usage.
                     </p>
                     <p>
-                      Since all tiles are using the same tilemap, I'm storing it as a static variable which saved me lots of memory.
+                      Since all tiles are using the same tilemap, I'm storing it as a static variable which saved me lots of memory too.
                     </p>
                     <p>
-                      For the slalom mode, flags are placed every X rows depending on the selected difficulty. For the off-road mode, the higher the difficulty is, the more obstacles there will be.
+                      In Slalom Mode, flags are placed at intervals based on the difficulty level. In Off-Road Mode, increased difficulty results in more obstacles.
                     </p>
                     <p>
                       Each tile stores the terrain that it has and the object that is on it as an enum value. The object is chosen randomly with chances varying based on the selected difficulty. Based on the game mode there is also a chance for a random power-up (health or shield) to spawn. <br>
@@ -232,7 +234,7 @@
                   <div class="project-section">
                     <h3><i class="bi bi-check2-circle"></i> 2.5D</h3>
                     <p>
-                      I first draw the background and the foreground and then I draw the player. Then, based on the player's position in the tile, I redraw the objects around him. This allows the player to go in front of and behind objects.
+                      The rendering system draws the background and foreground layers first, followed by the player character. Objects are redrawn based on the player's position within the tile, allowing the player to move in front of or behind objects, creating a 2.5D effect.
                       <figure class="figure">
                         <video src="/assets/img/portfolio/snow/25D.mp4" class="img-fluid sps2" autoplay loop muted></video>
                         <figcaption class="figure-caption text-center">2.5D - rendering the player in front of / behind objects based on its position</figcaption>
@@ -281,8 +283,9 @@
                 <div class="info-card">
                   <h3>Technologies Used</h3>
                   <div class="tech-stack">
-                    <span>Unreal Engine 5</span>
+                    <span>Custom Framework</span>
                     <span>C++</span>
+                    <span>SDL2</span>
                   </div>
                 </div>
 
