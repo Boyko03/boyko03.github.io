@@ -59,9 +59,9 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="/#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="/#hero"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="/#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="/#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li><a href="/#portfolio" class="active"><i class="bi bi-images navicon"></i> Projects</a></li>
         <li><a href="/#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         <li><a href="/boyko-georgiev.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="/blog.html"><i class="bi bi-journals navicon"></i> Blog</a></li>
@@ -85,213 +85,314 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
+    <style>
+        #details {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(/assets/img/portfolio/umbra-mortis/Background.PNG);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        section, .section {
+          background-color: transparent;
+        }
 
-        <div class="row gy-4">
+        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+          background-color: gray;
+        }
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
+        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+          background-color: var(--accent-color)
+        }
+        
+        #details {
+            p, h2, h3, div, .figure-caption {
+              color: rgb(198, 198, 198) !important;
+            }
+          }
 
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
+        .portfolio-info, .info-card, .gallery-grid {
+          opacity: 0.8 !important;
+          background-color: rgba(29, 12, 2, 0.5) !important;
+        }
+
+        .portfolio-info, .portfolio-info strong, .portfolio-info h3 {
+          color: white !important;
+        }
+
+        .info-card, .info-card li, .info-card strong, .info-card h3 {
+          color: white !important;
+        }
+
+        .gallery-grid h3 {
+          color: white !important;
+        }
+
+      </style>
+
+    <div id="details" class="dark-background">
+
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper init-swiper">
+
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
                   }
-                }
-              </script>
+                </script>
 
-              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/plaguefall/plaguefall.png" alt="">
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/Library_Header-Header_Capsule.png" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/two players in alleys.png" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/player shooting enemies in plaza.png" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/player shooting enemies widespread plaza.png" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/HighresScreenshot00040.png" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/assets/img/portfolio/umbra-mortis/HighresScreenshot00041.png" alt="">
+                  </div>
+
                 </div>
-
-                <!-- <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/portfolio-10.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/portfolio-7.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="/assets/img/portfolio/portfolio-4.webp" alt="">
-                </div> -->
-
+                <div class="swiper-pagination"></div>
               </div>
-              <div class="swiper-pagination"></div>
             </div>
-          </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Student Game</li>
-                <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
-                <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Sept 2024 - July 2025</li>
-                <li><strong><i class="bi bi-people"></i> Team Size:</strong> 23 -&gt; 6 programmers, 7 designers, 10 visual artists</li>
-                <li><strong><i class="bi bi-clock"></i> Duration:</strong> 32 weeks</li>
-                <li><strong>Project URL</strong> <a href="https://store.steampowered.com/app/3365870/?snr=1_5_9__205" target="_blank" rel="noopener">Released on Steam</a></li>
-              </ul>
+            <div class="col-lg-4">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong><i class="bi bi-info-circle-fill"></i> Type:</strong> Student Game</li>
+                  <li><strong><i class="bi bi-tools"></i> Engine/Language:</strong> Unreal Engine 5</li>
+                  <li><strong><i class="bi bi-calendar-fill"></i> Date:</strong> Sept 2024 - July 2025</li>
+                  <li><strong><i class="bi bi-people"></i> Team Size:</strong> 23 -&gt; 6 programmers, 7 designers, 10 visual artists</li>
+                  <li><strong><i class="bi bi-clock"></i> Duration:</strong> 32 weeks</li>
+                  <li><strong>Project URL</strong> <a href="https://store.steampowered.com/app/3365870/?snr=1_5_9__205" target="_blank" rel="noopener">Released on Steam</a></li>
+                </ul>
+              </div>
             </div>
+
           </div>
 
         </div>
 
-      </div>
+      </section><!-- /Portfolio Details Section -->
 
-    </section><!-- /Portfolio Details Section -->
+      <!-- Portfolio Details 3 Section -->
+      <section id="portfolio-details-3" class="portfolio-details-3 section">
 
-    <!-- Portfolio Details 3 Section -->
-    <section id="portfolio-details-3" class="portfolio-details-3 section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="portfolio-details-5">
-          <div class="row gy-5">
-            <div class="col-lg-7" data-aos="fade-up">
-              <div class="project-content">
-                <div class="project-header">
-                  <span class="category">Game</span>
-                  <h2>Umbra Mortis</h2>
-                  <div class="meta">
-                    <div class="meta-item">
-                      <i class="bi bi-calendar3"></i>
-                      <span>Sept 2024 - July 2025</span>
-                    </div>
-                    <div class="meta-item">
-                      <i class="bi bi-building"></i>
-                      <span>BUas</span>
-                    </div>
-                    <div class="meta-item">
-                      <i class="bi bi-globe"></i>
-                      <a href="https://store.steampowered.com/app/3365870/?snr=1_5_9__205" target="_blank" rel="noopener">Released on Steam</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="content">
-                  <p class="lead">
-                    Umbra Mortis is a cooperative online multiplayer first-person shooter developed in Unreal Engine 5.
-                  </p>
-
-                  <div class="project-section">
-                    <h3><i class="bi bi-stars"></i> My Contribution</h3>
-                    <p>
-                      My key contributions to this year-long project include, but are not limited to, setting up the CI/CD pipeline with Jenkins, managing session hosting and joining, ensuring proper replication of relevant data, developing the Gadget System, implementing asynchronous loading screens, and integrating various Steam features such as Stats & Achievements and Steam Lobbies.
-                    </p>
-                  </div>
-
-                  <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Gameplay Abilities and Effects</h3>
-                    <p>
-                      I utilized Unreal's Gameplay Ability System (GAS) to develop abilities for shooting, reloading, gadget usage, and applying relevant effects. The most significant challenge was ensuring these abilities functioned correctly for all players, both on the server and clients, while maintaining proper synchronization of attributes and player states.
-                    </p>
-                  </div>
-
-                  <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Multiplayer & Replication</h3>
-                    <p>
-                      In addition to ensuring proper replication of the Gameplay Ability System (GAS), I was also responsible for making sure that all relevant visual effects (VFX), sound effects (SFX), and animations were correctly synchronized across all players.
-                    </p>
-                    <p>
-                      Our game is a first-person shooter, which requires a first-person mesh for the local player and a third-person mesh for other players. I was responsible for ensuring that the correct mesh was displayed for each player, with the appropriate weapon properly attached.
-                      <div class="row">
-                        <img src="/assets/img/portfolio/plaguefall/mesh-fail-1.png" alt="" class="img-fluid col-6 sps2">
-                        <img src="/assets/img/portfolio/plaguefall/mesh-fail-2.png" alt="" class="img-fluid col-6 sps2">
-                        <span class="col-12 figure-caption text-center">Examples of mesh visibility not set up properly</span>
+          <div class="portfolio-details-5">
+            <div class="row gy-5">
+              <div class="col-lg-7" data-aos="fade-up">
+                <div class="project-content">
+                  <div class="project-header">
+                    <span class="category">Game</span>
+                    <h2>Umbra Mortis</h2>
+                    <div class="meta">
+                      <div class="meta-item">
+                        <i class="bi bi-calendar3"></i>
+                        <span>Sept 2024 - July 2025</span>
                       </div>
-                    </p>
+                      <div class="meta-item">
+                        <i class="bi bi-building"></i>
+                        <span>BUas</span>
+                      </div>
+                      <div class="meta-item">
+                        <i class="bi bi-globe"></i>
+                        <a href="https://store.steampowered.com/app/3365870/?snr=1_5_9__205" target="_blank" rel="noopener">Released on Steam</a>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Gadget System</h3>
-                    <p>
-                      I designed a modular gadget system that enables seamless integration of new gadgets by simply deriving from a base class. The system provides a clear interface for equipping, removing, and using gadgets, ensuring flexibility and ease of expansion.
-                      <figure class="figure">
-                        <video src="/assets/img/portfolio/plaguefall/PolishedGrenade.mp4" class="img-fluid sps2" autoplay loop muted></video>
-                        <figcaption class="figure-caption text-center">Grenade gadget made with my system</figcaption>
-                      </figure>
+                  <div class="content">
+                    <p class="lead">
+                      Umbra Mortis is a cooperative online multiplayer first-person shooter developed in Unreal Engine 5.
                     </p>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-stars"></i> My Contribution</h3>
+                      <p>
+                        My key contributions to this year-long project include, but are not limited to, setting up the CI/CD pipeline with Jenkins, managing session hosting and joining, ensuring proper replication of relevant data, implementing the Reconnect System, developing the Gadget System, implementing asynchronous loading screens, and integrating various Steam features such as Stats & Achievements and Steam Lobbies.
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Gameplay Abilities and Effects</h3>
+                      <p>
+                        I utilized Unreal's Gameplay Ability System (GAS) to develop abilities for shooting, reloading, gadget usage, and applying relevant effects (cost, cooldowns, damage). The most significant challenge was ensuring these abilities functioned correctly for all players, both on the server and clients, while maintaining proper synchronization of attributes and player states.
+                      </p>
+                      <p>
+                        Instead of making separate gameplay effects for each way damage can be dealt (gun and gadget for player, normal attack for enemy), I used gameplay tags to distinguish them and made one effect that applies damage based on the provided gameplay tags. I also used a custom damage calculation class to account for friendly fire.
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Multiplayer & Replication</h3>
+                      <p>
+                        In addition to ensuring proper replication of the Gameplay Ability System (GAS), I was also responsible for making sure that all relevant visual effects (VFX), sound effects (SFX), and animations were correctly synchronized across all players.
+                      </p>
+                      <p>
+                        Our game is a first-person shooter, which requires a first-person mesh for the local player and a third-person mesh for other players. I was responsible for ensuring that the correct mesh was displayed for each player, with the appropriate weapon properly attached.
+                        <div class="row">
+                          <img src="/assets/img/portfolio/umbra-mortis/mesh-fail-1.png" alt="" class="img-fluid col-6 sps2">
+                          <img src="/assets/img/portfolio/umbra-mortis/mesh-fail-2.png" alt="" class="img-fluid col-6 sps2">
+                          <span class="col-12 figure-caption text-center">Examples of mesh visibility not set up properly</span>
+                        </div>
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Reconnecting</h3>
+                      <p>
+                        One of the most requested features from our players was being able to rejoin a session in progress if you leave it accidentally or you get disconnected.
+                      </p>
+                      <p>
+                        To allow this, I had to enable joining sessions in progress which meant that now I had to manually filter which sessions a player can see and is allowed to join. Before that was happening automatically thanks to Steam. <br />
+                        My solution was for the host to store in their game instance an array of the unique net IDs of all connected players when the session starts and based on that when a player tries to join the session either allow it or return them to the main menu with appropriate reason. The host also has a map that is used to see if the player is reconnecting or not because that affects the spawning rules of our game. <br />
+                        When the session starts, the clients store its ID in their game instance, so that they can search for it if they disconnect. <br>
+                        I made a custom filter for showing the list of available sessions. I show only sessions that are not in progress, or the session with that stored ID if it still exists.
+                      </p>
+                      <p>
+                        The video below shows how one player hosts a session and the other two can find it. Then only one of them joins the session and starts it. When the player that didn’t join tries to join the session, <b>he is returned to the main menu</b> with the message that the session is already in progress or is full. If he searches for the session again, <b>he won’t find it</b>.
+                        <br />
+                        The player that joined the session successfully can leave the session at any time, find it, and <b>reconnect at any time</b>, however they will <b>join as dead spectators:</b>
+                        <figure class="figure">
+                          <video src="/assets/img/portfolio/umbra-mortis/Reconnect.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                        </figure>
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Gadget System</h3>
+                      <p>
+                        I designed a modular gadget system that enables seamless integration of new gadgets by simply deriving from a base class. The system provides a clear interface for equipping, removing, and using gadgets, ensuring flexibility and ease of expansion.
+                        <figure class="figure">
+                          <video src="/assets/img/portfolio/umbra-mortis/PolishedGrenade.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                          <figcaption class="figure-caption text-center">Grenade gadget made with my system</figcaption>
+                        </figure>
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Async Loading Screen</h3>
+                      <p>
+                        I implemented the loading screens using the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> but had to make several adjustments to ensure compatibility with seamless travel.
+                        <figure class="figure">
+                          <video src="/assets/img/portfolio/umbra-mortis/Loading screen.mp4" class="img-fluid sps2" autoplay loop muted></video>
+                          <figcaption class="figure-caption text-center">Async Loading Screen that shows a "Very Useful Loading Screen Tip"</figcaption>
+                        </figure>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-sidebar">
+                  <div class="info-card">
+                    <h3>Project Features</h3>
+                    <ul class="features-list">
+                      <li><i class="bi bi-check-circle"></i> Online multiplayer, Networking, Replication</li>
+                      <li><i class="bi bi-check-circle"></i> Gadget System</li>
+                      <li><i class="bi bi-check-circle"></i> Gameplay Ability System (GAS)</li>
+                      <li><i class="bi bi-check-circle"></i> Steam Features, Steamworks</li>
+                      <li><i class="bi bi-check-circle"></i> CI / CD with Perforce and Jenkins</li>
+                      <li><i class="bi bi-check-circle"></i> Async Loading Screens</li>
+                    </ul>
                   </div>
 
-                  <div class="project-section">
-                    <h3><i class="bi bi-check2-circle"></i> Async Loading Screen</h3>
-                    <p>
-                      I implemented the loading screens using the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> but had to make several adjustments to ensure compatibility with seamless travel.
-                      <figure class="figure">
-                        <video src="/assets/img/portfolio/plaguefall/Loading screen.mp4" class="img-fluid sps2" autoplay loop muted></video>
-                        <figcaption class="figure-caption text-center">Async Loading Screen that shows a "Very Useful Loading Screen Tip"</figcaption>
-                      </figure>
-                    </p>
+                  <div class="info-card">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-stack">
+                      <span>Unreal Engine 5</span>
+                      <span>C++</span>
+                      <span>Steamworks API</span>
+                      <span>GAS</span>
+                      <span>Jenkins</span>
+                    </div>
+                  </div>
+
+                  <div class="gallery-grid">
+                    <h3>Project Gallery</h3>
+                    <div class="row g-3">
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/Library_Header-Header_Capsule.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/two players in alleys.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/player shooting enemies in plaza.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/player shooting enemies widespread plaza.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/HighresScreenshot00040.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/umbra-mortis/HighresScreenshot00041.png" alt="" class="img-fluid glightbox" loading="lazy">
+                      </div>
+                      <!-- <div class="col-6">
+                        <img src="/assets/img/portfolio/portfolio-10.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      </div>
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/portfolio-9.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      </div>
+                      <div class="col-6">
+                        <img src="/assets/img/portfolio/portfolio-1.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
+                      </div> -->
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-              <div class="project-sidebar">
-                <div class="info-card">
-                  <h3>Project Features</h3>
-                  <ul class="features-list">
-                    <li><i class="bi bi-check-circle"></i> Online multiplayer, Networking, Replication</li>
-                    <li><i class="bi bi-check-circle"></i> Gadget System</li>
-                    <li><i class="bi bi-check-circle"></i> Gameplay Ability System (GAS)</li>
-                    <li><i class="bi bi-check-circle"></i> Steam Features, Steamworks</li>
-                    <li><i class="bi bi-check-circle"></i> CI / CD with Perforce and Jenkins</li>
-                    <li><i class="bi bi-check-circle"></i> Async Loading Screens</li>
-                  </ul>
-                </div>
-
-                <div class="info-card">
-                  <h3>Technologies Used</h3>
-                  <div class="tech-stack">
-                    <span>Unreal Engine 5</span>
-                    <span>C++</span>
-                    <span>Steamworks API</span>
-                    <span>GAS</span>
-                    <span>Jenkins</span>
-                  </div>
-                </div>
-
-                <div class="gallery-grid">
-                  <h3>Project Gallery</h3>
-                  <div class="row g-3">
-                    <div class="col-6">
-                      <img src="/assets/img/portfolio/plaguefall/plaguefall.png" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <!-- <div class="col-6">
-                      <img src="/assets/img/portfolio/portfolio-10.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <div class="col-6">
-                      <img src="/assets/img/portfolio/portfolio-9.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div>
-                    <div class="col-6">
-                      <img src="/assets/img/portfolio/portfolio-1.webp" alt="Gallery Image" class="img-fluid glightbox" loading="lazy">
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
 
-      </div>
+      </section><!-- /Portfolio Details 3 Section -->
 
-    </section><!-- /Portfolio Details 3 Section -->
+    </div>
 
   </main>
 
