@@ -27,6 +27,55 @@
   <!-- Main CSS File -->
   <link href="/assets/css/main.css" rel="stylesheet">
 
+  <style>
+    #details {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(/assets/img/portfolio/umbra-mortis/Background.PNG);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    section, .section {
+      background-color: transparent;
+    }
+
+    .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+      background-color: gray;
+    }
+
+    .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: var(--accent-color)
+    }
+    
+    #details {
+        p, h2, h3, div {
+          color: rgb(198, 198, 198) !important;
+        }
+
+        .figure-caption {
+          color: rgb(159, 159, 159) !important;
+        }
+      }
+
+    .portfolio-info, .info-card, .gallery-grid {
+      opacity: 0.8 !important;
+      background-color: rgba(29, 12, 2, 0.5) !important;
+    }
+
+    .portfolio-info, .portfolio-info strong, .portfolio-info h3 {
+      color: white !important;
+    }
+
+    .info-card, .info-card li, .info-card strong, .info-card h3 {
+      color: white !important;
+    }
+
+    .gallery-grid h3 {
+      color: white !important;
+    }
+
+  </style>
+
 </head>
 
 <body class="portfolio-details-page">
@@ -84,51 +133,6 @@
         </nav>
       </div>
     </div><!-- End Page Title -->
-
-    <style>
-        #details {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(/assets/img/portfolio/umbra-mortis/Background.PNG);
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-
-        section, .section {
-          background-color: transparent;
-        }
-
-        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-          background-color: gray;
-        }
-
-        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-          background-color: var(--accent-color)
-        }
-        
-        #details {
-            p, h2, h3, div, .figure-caption {
-              color: rgb(198, 198, 198) !important;
-            }
-          }
-
-        .portfolio-info, .info-card, .gallery-grid {
-          opacity: 0.8 !important;
-          background-color: rgba(29, 12, 2, 0.5) !important;
-        }
-
-        .portfolio-info, .portfolio-info strong, .portfolio-info h3 {
-          color: white !important;
-        }
-
-        .info-card, .info-card li, .info-card strong, .info-card h3 {
-          color: white !important;
-        }
-
-        .gallery-grid h3 {
-          color: white !important;
-        }
-
-      </style>
 
     <div id="details" class="dark-background">
 
@@ -266,11 +270,11 @@
                       </p>
                       <p>
                         Our game is a first-person shooter, which requires a first-person mesh for the local player and a third-person mesh for other players. I was responsible for ensuring that the correct mesh was displayed for each player, with the appropriate weapon properly attached.
-                        <div class="row">
+                        <!-- <div class="row">
                           <img src="/assets/img/portfolio/umbra-mortis/mesh-fail-1.png" alt="" class="img-fluid col-6 sps2">
                           <img src="/assets/img/portfolio/umbra-mortis/mesh-fail-2.png" alt="" class="img-fluid col-6 sps2">
                           <span class="col-12 figure-caption text-center">Examples of mesh visibility not set up properly</span>
-                        </div>
+                        </div> -->
                       </p>
                     </div>
 
@@ -309,11 +313,36 @@
                     <div class="project-section">
                       <h3><i class="bi bi-check2-circle"></i> Async Loading Screen</h3>
                       <p>
-                        I implemented the loading screens using the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> but had to make several adjustments to ensure compatibility with seamless travel.
+                        I implemented the loading screens using the <a href="https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595" target="_blank" rel="noopener noreferrer">Async Loading Screen Plugin</a> but had to make some adjustments to ensure compatibility with seamless travel.
                         <figure class="figure">
                           <video src="/assets/img/portfolio/umbra-mortis/Loading screen.mp4" class="img-fluid sps2" autoplay loop muted></video>
                           <figcaption class="figure-caption text-center">Async Loading Screen that shows a "Very Useful Loading Screen Tip"</figcaption>
                         </figure>
+                      </p>
+                      <p>
+                        The Async Loading Screen Plugin works only with hard level loading (<code>OpenLevel</code>) and not with soft level loading (<code>Server Travel</code> / <code>Seamless Travel</code>) which we have to use because otherwise the clients will get disconnected from the session. <br>
+                        To solve this problem, I modified the plugin's source and made new functions for manually starting and stopping the loading screen. I manually start the loading screen before the <code>ServerTravel</code> begins and stop it when the new level finishes loading.
+                      </p>
+                      <p>
+                        By doing so, we can see the loading screen when playing in <code>PIE</code> mode too and not only in <code>Standalone</code>.
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h3><i class="bi bi-check2-circle"></i> Jenkins Pipelines</h3>
+                      <p>
+                        <b>Daily builds pipeline:</b> I made a Jenkins pipeline that makes daily Development and Shipping builds of the project and uploads them to Steam in their corresponding branches so that we can easily test the game and get notified if the build failed.
+                      </p>
+                      <p>
+                        <b>Build from a shelved changelist pipeline:</b> When we started working on multiplayer features, I noticed that some features could only be tested with multiple people which meant that we had to make a build and upload it on Steam to test. However, we couldn't do so using the above pipeline, because we don't want to submit untested features to Perforce. <br>
+                        For that reason, I made a new pipeline that accepts the ID of a shelved changelist. It gets the latest revision from the depot, unshelves that changelist, makes a build, and uploads it to Steam.
+                      </p>
+                      <p>
+                        <b>April Fools pipeline:</b> I made a pipeline for 1st of April that sent a message to the team that the build failed and another message 10 minutes later that said it was a joke. It will trigger every year.
+                      </p>
+                      <p>
+                        <b>Pipeline for removing the exclusive checkout flag from <code>.uasset</code> files:</b> I made a pipeline that runs a powershell script that goes through the files in the project and removes the exclusive checkout flag from the files that have it. <br>
+                        This was necessary because that flag was slowing down our review process.
                       </p>
                     </div>
                   </div>
